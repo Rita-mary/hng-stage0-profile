@@ -1,0 +1,61 @@
+ERROR 2025-10-16 16:22:21,760 views 13522 124633926719040 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = request('https://catfact.ninja/fact', timeout=10)
+TypeError: 'Request' object is not callable
+INFO 2025-10-16 16:22:21,761 views 13522 124633926719040 No cat fact was found
+ERROR 2025-10-16 16:23:11,249 views 13669 133139460605504 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests('https://catfact.ninja/fact', timeout=10)
+TypeError: 'module' object is not callable
+INFO 2025-10-16 16:23:11,250 views 13669 133139460605504 No cat fact was found
+ERROR 2025-10-16 16:23:15,681 views 13669 133139460605504 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests('https://catfact.ninja/fact', timeout=10)
+TypeError: 'module' object is not callable
+INFO 2025-10-16 16:23:15,682 views 13669 133139460605504 No cat fact was found
+ERROR 2025-10-16 16:23:19,467 views 13669 133139460605504 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests('https://catfact.ninja/fact', timeout=10)
+TypeError: 'module' object is not callable
+INFO 2025-10-16 16:23:19,467 views 13669 133139460605504 No cat fact was found
+ERROR 2025-10-16 16:27:09,205 views 13844 136392346744384 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests('https://catfact.ninja/fact', timeout=10)
+TypeError: 'module' object is not callable
+INFO 2025-10-16 16:27:09,206 views 13844 136392346744384 No cat fact was found
+ERROR 2025-10-16 16:27:17,540 views 13844 136392346744384 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests('https://catfact.ninja/fact', timeout=10)
+TypeError: 'module' object is not callable
+INFO 2025-10-16 16:27:17,542 views 13844 136392346744384 No cat fact was found
+ERROR 2025-10-16 16:27:47,517 views 13844 136392346744384 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests('https://catfact.ninja/fact', timeout=10)
+TypeError: 'module' object is not callable
+INFO 2025-10-16 16:27:47,517 views 13844 136392346744384 No cat fact was found
+INFO 2025-10-16 16:30:27,372 views 14051 126274085701184 Connected successfully to cat facts api.
+INFO 2025-10-16 16:31:09,412 views 14156 127686014551616 Connected successfully to cat facts api.
+INFO 2025-10-16 16:31:09,412 views 14156 127686014551616 Cat fact successfully gotten
+INFO 2025-10-16 16:31:20,691 views 14156 127686014551616 Connected successfully to cat facts api.
+INFO 2025-10-16 16:31:20,691 views 14156 127686014551616 Cat fact successfully gotten
+INFO 2025-10-16 16:31:35,071 views 14156 127686014551616 Connected successfully to cat facts api.
+INFO 2025-10-16 16:31:35,071 views 14156 127686014551616 Cat fact successfully gotten
+INFO 2025-10-16 16:34:39,912 views 14559 131876358440512 Connected successfully to cat facts api.
+INFO 2025-10-16 16:34:39,913 views 14559 131876358440512 Cat fact successfully gotten
+INFO 2025-10-16 16:35:24,196 views 14729 125592674174528 Connected successfully to cat facts api.
+INFO 2025-10-16 16:35:24,197 views 14729 125592674174528 Cat fact successfully gotten
+INFO 2025-10-16 16:35:30,300 views 14729 125592674174528 Connected successfully to cat facts api.
+INFO 2025-10-16 16:35:30,301 views 14729 125592674174528 Cat fact successfully gotten
+INFO 2025-10-16 16:35:42,559 views 14729 125592674174528 Connected successfully to cat facts api.
+INFO 2025-10-16 16:35:42,560 views 14729 125592674174528 Cat fact successfully gotten
+INFO 2025-10-16 16:43:22,046 views 15091 133379672503872 Connected successfully to cat facts api.
+INFO 2025-10-16 16:43:22,047 views 15091 133379672503872 Cat fact successfully gotten
+INFO 2025-10-16 16:51:59,575 views 15432 128147037044736 Connected successfully to cat facts api.
+INFO 2025-10-16 16:51:59,575 views 15432 128147037044736 Cat fact successfully gotten
