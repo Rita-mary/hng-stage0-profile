@@ -6,6 +6,8 @@ from rest_framework.response import Response
 import requests 
 from django.conf import settings
 from rest_framework import status
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
 logger = logging.getLogger(__name__)
 
@@ -14,6 +16,26 @@ logger = logging.getLogger(__name__)
 
 class GetMyProfile(APIView):
 
+    @swagger_auto_schema(
+        operation_description="Get profile info and a random cat fact.",
+        responses={
+            200: openapi.Response(
+                description="Successful Response",
+                examples={
+                    "application/json": {
+                        "status": "success",
+                        "user": {
+                            "email": "amakomritamary322@gmail.com",
+                            "name": "Rita-mary Ngozi Amakom",
+                            "stack": "Python/Django/Django REST Framework"
+                        },
+                        "timestamp": "2025-10-16T14:00:00.000Z",
+                        "fact": "Cats sleep for 70% of their lives."
+                    }
+                }
+            )
+        }
+    )
     def get(self,request):
         timestamp = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
         email = getattr(settings,'MY_EMAIL', 'alt - amakomritamary322@gmail.com')

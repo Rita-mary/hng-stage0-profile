@@ -40,7 +40,7 @@ It demonstrates how to:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Rita-Mary/hng-stage0-profile.git
-cd hng-stage0-profile
+cd stage0
 ```
 
 ### 2. Install Dependencies

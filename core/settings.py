@@ -94,6 +94,7 @@ INSTALLED_APPS = [
     'profile_api',
     'rest_framework',
     'corsheaders',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [

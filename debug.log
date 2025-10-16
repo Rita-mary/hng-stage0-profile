@@ -59,3 +59,129 @@ INFO 2025-10-16 16:43:22,046 views 15091 133379672503872 Connected successfully 
 INFO 2025-10-16 16:43:22,047 views 15091 133379672503872 Cat fact successfully gotten
 INFO 2025-10-16 16:51:59,575 views 15432 128147037044736 Connected successfully to cat facts api.
 INFO 2025-10-16 16:51:59,575 views 15432 128147037044736 Cat fact successfully gotten
+INFO 2025-10-16 17:28:49,403 views 16287 130709875865152 Connected successfully to cat facts api.
+INFO 2025-10-16 17:28:49,404 views 16287 130709875865152 Cat fact successfully gotten
+INFO 2025-10-16 17:28:56,858 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 17:28:56,859 views 16287 130709841245760 Cat fact successfully gotten
+INFO 2025-10-16 17:29:09,537 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 17:29:09,537 views 16287 130709841245760 Cat fact successfully gotten
+ERROR 2025-10-16 19:39:21,175 views 16287 130709875865152 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x76e142a93880>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='catfact.ninja', port=443): Max retries exceeded with url: /fact (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76e142a93880>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests.get('https://catfact.ninja/fact', timeout=10)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='catfact.ninja', port=443): Max retries exceeded with url: /fact (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76e142a93880>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)"))
+INFO 2025-10-16 19:39:21,177 views 16287 130709875865152 No cat fact was found
+ERROR 2025-10-16 19:39:33,019 views 16287 130709841245760 There was an error connecting to the cat facts api.
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x76e142a91f90>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='catfact.ninja', port=443): Max retries exceeded with url: /fact (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76e142a91f90>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/rita-mary/stage_0/profile_api/views.py", line 23, in get
+    response = requests.get('https://catfact.ninja/fact', timeout=10)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/rita-mary/stage_0/venv/lib/python3.10/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='catfact.ninja', port=443): Max retries exceeded with url: /fact (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x76e142a91f90>: Failed to resolve 'catfact.ninja' ([Errno -3] Temporary failure in name resolution)"))
+INFO 2025-10-16 19:39:33,020 views 16287 130709841245760 No cat fact was found
+INFO 2025-10-16 19:46:51,219 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 19:46:51,219 views 16287 130709841245760 Cat fact successfully gotten
+INFO 2025-10-16 19:51:29,239 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 19:51:29,240 views 16287 130709841245760 Cat fact successfully gotten
+INFO 2025-10-16 19:51:49,717 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 19:51:49,718 views 16287 130709841245760 Cat fact successfully gotten
+INFO 2025-10-16 19:55:40,587 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 19:55:40,588 views 16287 130709841245760 Cat fact successfully gotten
+INFO 2025-10-16 19:56:25,800 views 16287 130709841245760 Connected successfully to cat facts api.
+INFO 2025-10-16 19:56:25,801 views 16287 130709841245760 Cat fact successfully gotten
