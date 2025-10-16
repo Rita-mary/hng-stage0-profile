@@ -76,9 +76,8 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'rita-mary-profile.up.railway.app']
 
 
 # Application definition
@@ -186,6 +185,14 @@ MY_NAME = 'Rita-mary Ngozi Amakom'
 MY_STACK = 'python-django-djangorestframework'
 
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "https://rita-mary-profile.up.railway.app",
+    "http://localhost:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://rita-mary-profile.up.railway.app",
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': [
